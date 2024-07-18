@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-16 14:45:31.722763",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subprize_name",
+  "voucher_type",
+  "promotion_code",
+  "minimum_sales_amount",
+  "maximum_sales_amount",
+  "voucher_percent",
+  "voucher_amount",
+  "amended_from",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "subprize_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sub-prize Name"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Select",
+   "label": "Voucher Type",
+   "options": "Free Item\nDiscount Percentage\nDiscount Price"
+  },
+  {
+   "depends_on": "eval: doc.voucher_type == \"Free Item\"",
+   "fieldname": "promotion_code",
+   "fieldtype": "Data",
+   "label": "Promotion Code",
+   "mandatory_depends_on": "eval: doc.voucher_type == \"Free Item\""
+  },
+  {
+   "depends_on": "eval: doc.voucher_type == \"Discount Percentage\"",
+   "fieldname": "minimum_sales_amount",
+   "fieldtype": "Currency",
+   "label": "Minimum Sales Amount",
+   "mandatory_depends_on": "eval: doc.voucher_type == \"Discount Percentage\""
+  },
+  {
+   "depends_on": "eval: doc.voucher_type == \"Discount Percentage\"",
+   "fieldname": "maximum_sales_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Sales Amount",
+   "mandatory_depends_on": "eval: doc.voucher_type == \"Discount Percentage\""
+  },
+  {
+   "depends_on": "eval: doc.voucher_type == \"Discount Percentage\"",
+   "fieldname": "voucher_percent",
+   "fieldtype": "Percent",
+   "label": "Voucher %",
+   "mandatory_depends_on": "eval: doc.voucher_type == \"Discount Percentage\""
+  },
+  {
+   "depends_on": "eval: doc.voucher_type == \"Discount Price\"",
+   "fieldname": "voucher_amount",
+   "fieldtype": "Currency",
+   "label": "Voucher Amount",
+   "mandatory_depends_on": "eval: doc.voucher_type == \"Discount Price\""
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sub-Prize",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Inactive",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-18 14:56:59.268149",
+ "modified_by": "Administrator",
+ "module": "Loyalty",
+ "name": "Sub-Prize",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Active"
+  },
+  {
+   "color": "Red",
+   "title": "Inactive"
+  }
+ ],
+ "title_field": "subprize_name"
+}
