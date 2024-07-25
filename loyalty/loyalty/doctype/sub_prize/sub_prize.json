@@ -8,10 +8,14 @@
  "engine": "InnoDB",
  "field_order": [
   "subprize_name",
+  "column_break_axozl",
   "voucher_type",
+  "section_break_gblwe",
   "promotion_code",
   "minimum_sales_amount",
+  "column_break_rw2az",
   "maximum_sales_amount",
+  "section_break_ykoml",
   "voucher_percent",
   "voucher_amount",
   "amended_from",
@@ -82,11 +86,27 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "column_break_axozl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gblwe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rw2az",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ykoml",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-18 14:56:59.268149",
+ "modified": "2024-07-25 11:30:01.786369",
  "modified_by": "Administrator",
  "module": "Loyalty",
  "name": "Sub-Prize",
