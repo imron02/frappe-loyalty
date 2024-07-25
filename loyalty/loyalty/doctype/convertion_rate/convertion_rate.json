@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-25 14:39:33.424103",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "convertion_stamp",
+  "column_break_jp3w5",
+  "minimum_transaction",
+  "section_break_hleeq",
+  "started_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "convertion_stamp",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Convertion Stamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jp3w5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_transaction",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Min. Transaction for 1 Stamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_hleeq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "started_at",
+   "fieldtype": "Date",
+   "label": "Started at",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-07-25 14:40:48.395629",
+ "modified_by": "Administrator",
+ "module": "Loyalty",
+ "name": "Convertion Rate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
